@@ -1,0 +1,262 @@
+body {
+    margin: 0px;
+}
+
+.header {
+    width: 100%;
+    height: 64px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fleche {
+    padding-left: 15px;
+    color: black;
+}
+
+.logo {
+    width: 197px;
+    margin: auto;
+}
+
+.image {
+    width: 100%;
+    height: 257px;
+    object-fit: cover;
+    position: static;
+    margin-bottom: -50px;
+}
+
+.menu {
+    width: auto;
+    border-radius: 25px 25px 0px 0px;
+    position: relative;
+    background-color: #F6F6F6;
+    padding: 10px 10px 30px 10px;
+}
+
+.restaurant {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Boutton Like */
+.like, .dislike {
+    position: absolute;
+    font-size: 30px;
+    transform: translate(-50%, -50%);
+    transition: all 0.6s linear;
+}
+
+.like {
+    opacity: 0;
+    background: linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    text-stroke-color: transparent;
+    -webkit-text-stroke-color: transparent;
+}
+
+.dislike {
+    opacity: 1;
+}
+
+.heart-container:hover .like {
+    opacity: 1;
+}
+
+.heart-container:hover .dislike {
+    opacity: 0;
+}
+
+
+.titre {
+    border-bottom: 3px solid#99E2D0;
+    margin-top: 40px;
+    width: 50px;
+}
+
+.plat {
+    display: flex;
+    line-height: 10px;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    height: auto;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.plat__name {
+    padding-left: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    flex: 1;
+}
+
+.plat__name--titre {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1;
+}
+
+.plat__name--desc {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1;
+}
+
+.plat__prix {
+    align-self: flex-end;
+    font-size: 18px;
+    padding-right: 10px;
+}
+
+.plat__check {
+    background-color: #99E2D0;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-right: -14%;
+    transition: 2s;
+}
+
+.plat:hover .plat__check {
+    margin-right: 0%;
+}
+
+
+.button {
+    padding: 10px 20px;
+    color: #fff;
+    background: linear-gradient(to top, #9356dc 0%, #ff79DA 100%);
+    border-radius: 25px;
+    border: none;
+    margin: 40px auto;
+    display: flex;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: #353535;
+    color: white;
+    padding: 22px 25px 22px 25px;
+}
+
+.plan {
+    line-height: 15px;
+}
+
+.propos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+/* Affichage tablette */
+@media screen and (min-width:600px) and (max-width:1024px){
+    body{
+        margin: 0px;
+    }
+    .menu{
+        margin: auto;
+        width: 65%;
+    }
+    .plat{
+        width: 634px;
+        margin: 10px auto;
+    }
+    .plat__check{
+        margin-right: -8%;
+    }
+    .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+    }
+
+    .plan {
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+        gap: 10px;
+    }
+}
+
+/* Affichage DESKTOP */
+@media screen and (min-width:1025px) {
+    body {
+        width: 100%;
+    }
+
+    .restaurant {
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .img {
+        width: 100%;
+    }
+
+    .image {
+        width: 100%;
+        height: 380px;
+        object-fit: cover;
+        position: static;
+        margin-bottom: -25px;
+    }
+
+    .menu {
+        margin: auto;
+        width: 1055px;
+        border-radius: 25px;
+        background-color: #F6F6F6;
+        padding: 10px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .titre {
+        margin-left: 20%;
+    }
+
+    .plat {
+        margin: 10px auto 10px auto;
+        width: 634px;
+    }
+
+    .plat__prix {
+        padding-right: 20px;
+    }
+
+    .plat__check {
+        margin-right: -9%;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+    }
+
+    .plan {
+        display: flex;
+        flex-direction: row;
+        padding: 20px;
+        gap: 10px;
+    }
+}
